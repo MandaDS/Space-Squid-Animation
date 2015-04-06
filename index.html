@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
+<title>ika.ink | Space Squid Demo</title>
+<meta name="robots" content="noindex, nofollow">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,400italic,900italic|Ubuntu:300,400,700,400italic,700italic|Comfortaa:400,700|Prosto+One' rel='stylesheet' type='text/css'>
+<link rel="pingback" href="http://ika.ink" />
+
+<style type="text/css">
+body {
+    background: #23223f url('images/background.jpg') repeat-x center center;
+    color: #2C3E50;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    height:100%;
+    letter-spacing: .7px;
+    margin: 0;
+    text-shadow: 0 0 6px #000;
+}
+a {
+    color: #E26A6A;
+    text-decoration: none;
+}
+a:hover {
+    color: #ffffff;
+} 
+h2  {
+	color: #ffffff;
+    display: block;
+    font-family: "Comfortaa", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    padding-left: 20px;
+    text-shadow: 0 0 6px #000;
+}
+.container-fluid {
+    padding: 0;
+}
+header {
+    background-color: #1f2139;
+    margin: 0 0 30px;
+    padding: 5px;
+}
+.text {
+    padding: 10px;
+    margin: 0 10%;
+}
+.box {
+    background-color: #1f2139;
+    border-radius: 10px;
+    color: #ffffff;
+    display: block;
+    margin: 20px 10%;
+    padding: 10px;
+}
+.box h2 {
+	font-size: 28px;
+	margin-left: 0;
+}
+#wrapper {
+	width:100%;
+	height:350px;
+	position:relative;
+	margin:auto;
+	overflow: hidden;
+}
+button#start,
+button#stop {
+	font-size: 15px;
+	color: #050505;
+	padding: 5px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#ebebeb 50%,
+		#dbdbdb 50%,
+		#b5b5b5);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		color-stop(0.50, #ebebeb),
+		color-stop(0.50, #dbdbdb),
+		to(#b5b5b5));
+	border-radius: 10px;
+	border: 1px solid #949494;
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 2px rgba(255,255,255,1);
+	text-shadow:
+		0px -1px 4px rgba(000,000,000,0.2),
+		0px 1px 2px rgba(255,255,255,1);
+}	
+
+/* Animation Relevant CSS */
+#container1,
+#container2,
+#container3 {
+	position: relative;
+	visibility: hidden;
+}
+#container1 {
+	-webkit-animation: squid_one 4s infinite;
+	-moz-animation: squid_one 4s infinite;
+	animation: squid_one 4s infinite;
+}
+@-webkit-keyframes squid_one
+{  
+0%   {right:-20%; top:0; visibility:visible;}
+25%  {right:20%; top:20%; visibility:visible;}
+50%  {right:40%; top:40%; visibility:visible;}
+75%  {right:60%; top:40%; visibility:visible;}
+100% {right:150%; top:0; visibility:visible;}
+}
+@-moz-keyframes squid_one
+{  
+0%   {right:-20%; top:0; visibility:visible;}
+25%  {right:20%; top:20%; visibility:visible;}
+50%  {right:40%; top:40%; visibility:visible;}
+75%  {right:60%; top:40%; visibility:visible;}
+100% {right:150%; top:0; visibility:visible;}
+}
+@keyframes squid_one
+{  
+0%   {right:-20%; top:0; visibility:visible;}
+25%  {right:20%; top:20%; visibility:visible;}
+50%  {right:40%; top:40%; visibility:visible;}
+75%  {right:60%; top:40%; visibility:visible;}
+100% {right:150%; top:0; visibility:visible;}
+}
+
+#container2 {
+	-webkit-animation: squid_two 4s infinite;
+	-moz-animation: squid_two 4s infinite;
+	animation: squid_two 4s infinite;
+
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
+@-webkit-keyframes squid_two
+{  
+0%   {right:-20%; top:40%; visibility:visible;}
+25%  {right:20%; top:40%; visibility:visible;}
+50%  {right:40%; top:20%; visibility:visible;}
+75%  {right:60%; top:60%; visibility:visible;}
+100% {right:150%; top:0; visibility:visible;}
+}
+@-moz-keyframes squid_two
+{  
+0%   {right:-20%; top:40%; visibility:visible;}
+25%  {right:20%; top:40%; visibility:visible;}
+50%  {right:40%; top:20%; visibility:visible;}
+75%  {right:60%; top:60%; visibility:visible;}
+100% {right:150%; top:0; visibility:visible;}
+}
+@keyframes squid_two
+{
+0%   {right:-20%; top:40%; visibility:visible;}
+25%  {right:20%; top:40%; visibility:visible;}
+50%  {right:40%; top:20%; visibility:visible;}
+75%  {right:60%; top:60%; visibility:visible;}
+100% {right:150%; top:0; visibility:visible;}
+}
+
+#container3 {
+	-webkit-animation: squid_three 4s infinite;
+	-moz-animation: squid_three 4s infinite;
+	animation: squid_three 4s infinite;
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+}
+@-webkit-keyframes squid_three
+{  
+0%   {right:-20%; top:50%; visibility:visible;}
+25%  {right:20%; top:40%; visibility:visible;}
+50%  {right:40%; top:20%; visibility:visible;}
+75%  {right:60%; top:0; visibility:visible;}
+100% {right:150%; top:-20%; visibility:visible;}
+}
+@-moz-keyframes squid_three
+{  
+0%   {right:-20%; top:50%; visibility:visible;}
+25%  {right:20%; top:40%; visibility:visible;}
+50%  {right:40%; top:20%; visibility:visible;}
+75%  {right:60%; top:0; visibility:visible;}
+100% {right:150%; top:-20%; visibility:visible;}
+}
+@keyframes squid_three
+{
+0%   {right:-20%; top:50%; visibility:visible;}
+25%  {right:20%; top:40%; visibility:visible;}
+50%  {right:40%; top:20%; visibility:visible;}
+75%  {right:60%; top:0%; visibility:visible;}
+100% {right:150%; top:-20%; visibility:visible;}
+}
+
+.squid {
+
+	-webkit-animation: swim-cycle 1s steps(11) infinite;
+	-moz-animation: swim-cycle 1s steps(11) infinite;
+	animation: swim-cycle 1s steps(11) infinite;
+	background: url(images/squidsheetcolor.png) 0 0 no-repeat; 
+	height: 50px;
+	width: 159px;
+	position:relative;
+	z-index:1;
+}
+.fins {
+	-webkit-animation: fin-cycle 1s steps(11) infinite;
+	-moz-animation: fin-cycle 1s steps(11) infinite;
+	animation: fin-cycle 1s steps(11) infinite;
+	background: url(images/squidsheetcolor.png) 0 0 no-repeat; 
+	height: 25px;
+	width: 50px;
+	position:absolute;
+	top:2px;
+	left:5px;
+}
+
+@-webkit-keyframes swim-cycle
+{  
+  0% {background-position: 0 0; } 
+  100% {background-position: 0 -551px; } 
+}
+@-moz-keyframes swim-cycle
+{  
+  0% {background-position: 0 0; } 
+  100% {background-position: 0 -551px; } 
+}
+@keyframes swim-cycle 
+{  
+  0% {background-position: 0 0; } 
+  100% {background-position: 0 -551px; }
+}	
+
+@-webkit-keyframes fin-cycle
+{  
+  0% {background-position: -159px 0; } 
+  100% {background-position: -159px -275px; }
+}
+@-moz-keyframes fin-cycle
+{  
+  0% {background-position: -159px 0; } 
+  100% {background-position: -159px -275px; }
+}
+@keyframes fin-cycle 
+{  
+  0% {background-position: -159px 0; } 
+  100% {background-position: -159px -275px; }
+}
+
+#container1.stop,
+#container2.stop,
+#container3.stop,
+.squid.stop,
+.fins.stop {
+	-webkit-animation-name: none!important;
+	-moz-animation-name: none!important;
+	animation-name: none!important;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container-fluid">
+		<header>
+		<div class="row">
+			<div class="col-md-12">
+				<h2>SPACE SQUID DEMO | Launch the squid :
+				<button type="button" name="animate_button" id="start">Start</button>
+	        	<button type="button" name="animate_button" id="stop">Stop</button>
+	        	</h2>
+			</div>
+		</div>
+		</header>
+
+<!--- SQUIDS -->
+		<div id="wrapper">
+			<div id="container1" class="animation stop" align="right">
+	            <div class="squid animation stop">
+	                <div class="fins animation stop">
+	                </div>
+	            </div>
+	        </div>
+	        <div id="container2" class="animation stop" align="right">
+	            <div class="squid animation stop">
+	                <div class="fins animation stop">
+	                </div>
+	            </div>
+	        </div>
+	        <div id="container3" class="animation stop" align="right">
+	            <div class="squid animation stop">
+	                <div class="fins animation stop">
+	                </div>
+	            </div>
+	        </div>
+        </div>
+<!--- SQUIDS -->
+
+		<div class="text">
+				<div class="box">
+					<h2>The Majestic Squid...</h2>
+					<p>As it hurls itself through space and time. Is there any more facinating a sight?!</p>
+					<p>Once the start button is pressed there should be space squids propelling their way across the screen! Viewable in current Firefox, Chrome and Safari browsers. Sorry IE (9 and under) people, you should get a better browser. IE doesn't like cool coding effects. They don't want you having too much fun.</p>
+					<p>Included in this demo download is a copy of the colored and non-colored sprite sheet for the squids and the original Photoshop PSD file. Feel free to re-color or alter it as you like!</p>
+					<p><a href="http://ika.ink">Go back to ika.ink</a></p>
+				</div>
+		</div>
+	</div>
+
+ 	<!-- jQuery and javascript -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script>
+	(function( $ ) {
+		$(function() {
+			$( "#stop" ).click(function() {
+				$( ".animation" ).addClass( "stop" );
+			});
+			$( "#start" ).click(function() {
+				$( ".animation" ).removeClass( "stop" );
+			});
+		});
+
+	})( jQuery );
+	</script>
+</body>
+</html>
